@@ -1,0 +1,40 @@
+.product{
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100px;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+
+    box-shadow: 5px 5px 7px rgba(100,100,100,.7);
+}
+
+.product img{
+    height: 200px;
+    object-fit: contain;
+}
+
+.product button{
+    background: crimson;
+    padding: 3px;
+    border: none;
+    color: white;
+
+    width: 150px;
+    margin: 0 auto;
+
+    cursor: pointer;
+}
+
+.product button:focus{
+    outline: none;
+}
+
+.product__rating{
+    color: black;
+}
+
+.checkedStar {
+    color: crimson;
+}
