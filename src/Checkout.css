@@ -1,0 +1,21 @@
+.checkout__emptyInfo{
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+}
+
+.checkout__emptyInfo h2{
+    margin-bottom: 5px;
+}
+
+.checkout__emptyLink{
+    color: blue;
+    text-decoration: none;
+}
+
+.checkout img{
+    margin-top: 20px;
+    object-fit: contain;
+    width: 90%;
+    max-height:350px;
+}

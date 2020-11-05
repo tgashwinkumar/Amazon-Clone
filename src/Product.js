@@ -27,17 +27,12 @@ function Product({id,title,price,rating,image}) {
             <div className="product__info">
                 <p>{title}</p>
                 <p className="product__price">
-                    <span>&#165;</span>
+                    <span>&#163; </span>
                     <strong>{price}</strong>
                 </p>
                 <div className="product__rating">
-                    {
-                        Array(rating).fill().map(_ => <span className="checkedStar"><StarIcon/></span>)
-                    }
-                    
-                    {
-                        Array(antirating).fill().map(_ => <span><StarIcon/></span>)
-                    }
+                    { Array(rating).fill().map(_ => <span className="checkedStar"><StarIcon/></span>) }
+                    { Array(antirating).fill().map(_ => <span><StarIcon/></span>) }
                 </div>
             </div>
             

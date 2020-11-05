@@ -9,7 +9,7 @@ import {useStateValue} from './StateProvider'
 function Header() {
 
     const [{basket}, dispatch] = useStateValue();
-
+    console.log("From Header:-", basket, dispatch)
     return (
         <nav className="header">
             <Link to="/">
@@ -46,7 +46,7 @@ function Header() {
 
                     The optional chaining ?. stops the evaluation if the part before ?. is undefined or null,
                      and returns that part. */}
-                     
+
                 </Link>
 
 
