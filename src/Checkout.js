@@ -3,7 +3,8 @@ import './Checkout.css'
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 import {Link} from 'react-router-dom';
-import emptyCart from './images/emptycart.svg'
+import emptyCart from './images/emptycart.svg';
+import SubTotal from './SubTotal';
 
 function Checkout() {
 
@@ -18,13 +19,19 @@ function Checkout() {
                     <img src={emptyCart} alt="Your Basket is empty." className="checkout__emptyImg"/>
                 </div>
             ) : (
-                <div>
-                    <h2>Your Shopping basket:</h2>
-                    {
-                        basket.map(
-                            item => <CheckoutProduct id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image}/>
-                        )
-                    }
+                <div className="checkout__left"> 
+                    <div>
+                        <h2 className="checkout__head">Your Shopping basket</h2>
+                        {basket.map(
+                                item => <CheckoutProduct id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image}/>
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {basket?.length > 0 && (
+                <div className="checkout_right">
+                    <SubTotal/>
                 </div>
             )
             }

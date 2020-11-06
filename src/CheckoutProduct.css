@@ -1,15 +1,18 @@
+
 .checkoutProduct{
+	width: 100%;
 	position: relative;
 	display: flex;
 	padding:10px 10px;
 	margin:10px 0;
 	background: linear-gradient(to top, #D4D4D4 0%, #FFFFFF 30%);
+	
+	box-sizing: border-box;
 }
 
 .checkoutProduct img{
 	height: 150px;
 	object-fit: contain;
-
 	margin-right: 10px;
 }
 
@@ -40,4 +43,32 @@
 
 .checkedStar {
 	color: crimson;
+}
+
+@media only screen and (max-width: 480px){
+	/*Mobile*/
+	.checkoutProduct{
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	.checkoutProduct img{
+		height: 160px;
+		width: 100%;
+	}
+
+	.checkoutProduct button{
+		position: relative;
+		margin-top:30px;
+		left:50%;
+		transform: translateX(-50%);
+	}
+
+	.checkoutProduct__price{
+		font-size: 150%;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	/*Tablet*/
 }

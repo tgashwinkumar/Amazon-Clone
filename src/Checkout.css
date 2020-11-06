@@ -1,3 +1,14 @@
+.checkout{
+    height: max-content;
+    display: flex;
+}
+
+.checkout__left{
+    flex:1;
+    overflow-y: scroll;
+    height: 89vh;
+}
+
 .checkout__emptyInfo{
     margin-top: 10px;
     background: white;
@@ -22,4 +33,11 @@
     position: relative;
     left:50%;
     transform: translateX(-50%);
+}
+
+.checkout__head{
+    font-size: 200%;
+    margin:10px 10px 20px 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid grey;
 }

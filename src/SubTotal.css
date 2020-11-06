@@ -1,0 +1,27 @@
+.subtotal{
+    background: linear-gradient(to top, #ffb1b1, #ffc9c9);
+    width: 200px;
+    padding: 10px;
+    position: sticky;
+    overflow-y: hidden;
+}
+.subtotal__head{
+    margin-bottom: 20px ;
+}
+.subtotal button{
+	background: crimson;
+    padding: 3px;
+    margin:20px 10px;
+	border: none;
+	color: white;
+	width: 150px;
+    cursor: pointer;
+    
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.subtotal button:focus{
+	outline: none;
+}
