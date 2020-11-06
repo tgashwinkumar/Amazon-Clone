@@ -1,5 +1,3 @@
-import shoe2 from './images/0004.jpg';
-
 export const initialState = {
     basket:[],
     user:null,
