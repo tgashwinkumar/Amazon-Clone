@@ -1,0 +1,43 @@
+.checkoutProduct{
+	position: relative;
+	display: flex;
+	padding:10px 10px;
+	margin:10px 0;
+	background: linear-gradient(to top, #D4D4D4 0%, #FFFFFF 30%);
+}
+
+.checkoutProduct img{
+	height: 150px;
+	object-fit: contain;
+
+	margin-right: 10px;
+}
+
+.checkoutProduct__price{
+	font-size: 150%;
+}
+
+.checkoutProduct button{
+	background: crimson;
+	padding: 3px;
+	border: none;
+	color: white;
+	width: 150px;
+	cursor: pointer;
+
+	position: absolute;
+	bottom: 10px;
+}
+
+.checkoutProduct button:focus{
+	outline: none;
+}
+
+
+.checkoutProduct__rating{
+	color: black;
+}
+
+.checkedStar {
+	color: crimson;
+}

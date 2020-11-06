@@ -13,9 +13,13 @@
     text-decoration: none;
 }
 
-.checkout img{
-    margin-top: 20px;
+.checkout__emptyImg{
+    margin-top: 50px;
     object-fit: contain;
-    width: 90%;
+    width: 50%;
     max-height:350px;
+
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
 }
