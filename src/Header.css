@@ -11,7 +11,7 @@
     height: 50px;
     margin: 5px;
 
-    filter:brightness(500%);
+    filter:brightness(5000%);
     object-fit: contain;
     /* Maintains the aspect ratio  */
 }

@@ -1,64 +1,35 @@
 import React from 'react';
-import logo from "./images/logo.svg"
-import './Header.css'
-import {Link} from 'react-router-dom';
-import SearchIcon from  '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import {useStateValue} from './StateProvider';
-import {auth} from './firebase';
+import './Home.css';
+import bannerImage from './images/bannerImg.jpg';
+import Product from './Product'
+import shoe1 from './images/0001.jpg';
+import shoe2 from './images/0002.jpg';
+import shoe3 from './images/0003.jpg';
+import shoe4 from './images/0004.jpg';
+import shoe5 from './images/0005.jpg';
+import shoe6 from './images/0006.jpg';
+import shoe7 from './images/0007.jpg';
+import shoe8 from './images/0008.jpg';
+import shoe9 from './images/0009.jpg';
 
-function Header() {
 
-    const [{basket, user}, dispatch] = useStateValue();
-
-    const login = () => {
-        if(user){
-            auth.signOut();
-        }
-    }
+function Home() {
     return (
-        <nav className="header">
-            <Link to="/">
-                <img className="header__logo" src={logo} alt="ShopMart" />
-            </Link>
-
-            <div className="header__search">
-                <input className="header__searchInput" type="text" placeholder="Enter your search here" />
-                <SearchIcon className="header__searchIcon" />
+        <div className="home">
+            <img src={bannerImage} alt="BannerImage"  className="home__image"/>
+            <div className="home__productGrid">
+            <Product  id="0001" title="Black and White Nike SportsX"  price={11.96} rating={5} image={shoe1} />
+            <Product  id="0002" title="Canva"  price={4.44} rating={4} image={shoe2} />
+            <Product  id="0003" title="Red Nike StyleZ"  price={12.36} rating={5} image={shoe3} />
+            <Product  id="0004" title="Crimso BatterN"  price={21.45} rating={3} image={shoe4} />
+            <Product  id="0005" title="Paradigm SkyBlue D234"  price={101.36} rating={5} image={shoe5} />
+            <Product  id="0006" title="Black and White Nike SportsX"  price={11.12} rating={4} image={shoe6} />
+            <Product  id="0007" title="Black and White Nike SportsX"  price={43.23} rating={5} image={shoe7} />
+            <Product  id="0008" title="Black and White Nike SportsX"  price={3.99} rating={5} image={shoe8} />
+            <Product  id="0009" title="Black and White Nike SportsX"  price={6.99} rating={5} image={shoe9} />
             </div>
-
-            <div className="header__nav">
-                <Link to={!user && "/login"} className="header__link">
-                    <div onClick={login} className="header__option">
-                        <p>Hello, {user?.email?.split('@')[0]}</p>
-                        <p>{user ? 'Sign Out' : 'Sign In'}</p>
-                    </div>
-                </Link>
-
-                <Link to="/" className="header__link">
-                    <div className="header__option">
-                        <p>Returns &</p>
-                        <p>Orders</p>
-                    </div>
-                </Link>
-
-                <Link to="/checkout" className="header__link">
-                    <div className="header__optionBasket">
-                        <ShoppingBasketIcon className="header__basketIcon"/>
-                        <span>{basket?.length}</span>
-                    </div>
-
-                    {/* Optional chaining:- (?.)
-
-                    The optional chaining ?. stops the evaluation if the part before ?. is undefined or null,
-                     and returns that part. */}
-
-                </Link>
-
-
-            </div>
-        </nav>
+        </div>
     )
 }
 
-export default Header
+export default Home
