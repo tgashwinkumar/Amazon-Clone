@@ -1,55 +1,13 @@
-import shoe2 from './images/0004.jpg';
-
 export const initialState = {
-    basket:[{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },{
-        id:"0001",
-        title:"Black and White Nike SportsX",
-        price:11.96,
-        rating:5,
-        image:shoe2
-    },],
+    basket:[],
     user:null,
 }
 
 const reducer = (state, action) => {
     console.log("From reducer:- ", "\nState:",state,"\nAction:",action);
     switch(action.type){
+        case "SET_USER":
+            return {...state, user:action.user}
         case "ADD_TO_BASKET":
             return {...state, basket: [...state.basket, action.item]};
         case "REMOVE_FROM_BASKET":
